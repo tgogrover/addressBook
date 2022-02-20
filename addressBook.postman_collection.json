@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "f13d6b79-94a0-4524-b2a9-a3624d212699",
+		"name": "addressBook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3005/api/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"8950887756\",\r\n    \"contacts\":8950887756\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3005/api/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3005/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contacts\":8950887756,\r\n    \"password\":\"8950887756\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3005/api/add/bulkcontacts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorisation",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjEyMTZmYTAyNmQ4ZTBlNDY1NDUxN2MiLCJDb250YWN0cyI6ODk1MDg4Nzc1NiwiaWF0IjoxNjQ1MzUyNzQxfQ.5gcdLX38VA4fbRWLV-oIpO6IN_YZrfPgNPQM1D-i-KE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"Contacts\":8950887756,\r\n\"Address\":\"Mayank handloom\"},\r\n{\"Contacts\":9468051067,\r\n\"Address\":\"Mayank handloom\"}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/api/add/bulkcontacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"add",
+						"bulkcontacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3005/api/add/singleContacts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorisation",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjEyMTZmYTAyNmQ4ZTBlNDY1NDUxN2MiLCJDb250YWN0cyI6ODk1MDg4Nzc1NiwiaWF0IjoxNjQ1MzUyNzQxfQ.5gcdLX38VA4fbRWLV-oIpO6IN_YZrfPgNPQM1D-i-KE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"contacts\":8953887756,\r\n\"address\":\"Mayank handloom\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3005/api/add/singleContacts",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"add",
+						"singleContacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3005/api/fetch/singleContacts/62128547c5bde0d03178e171",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorisation",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjEyMTZmYTAyNmQ4ZTBlNDY1NDUxN2MiLCJDb250YWN0cyI6ODk1MDg4Nzc1NiwiaWF0IjoxNjQ1MzUyNzQxfQ.5gcdLX38VA4fbRWLV-oIpO6IN_YZrfPgNPQM1D-i-KE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3005/api/fetch/singleContacts/62128547c5bde0d03178e171",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"fetch",
+						"singleContacts",
+						"62128547c5bde0d03178e171"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3005/api/contact/paginate/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorisation",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjEyMTZmYTAyNmQ4ZTBlNDY1NDUxN2MiLCJDb250YWN0cyI6ODk1MDg4Nzc1NiwiaWF0IjoxNjQ1MzUyNzQxfQ.5gcdLX38VA4fbRWLV-oIpO6IN_YZrfPgNPQM1D-i-KE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3005/api/contact/paginate/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"contact",
+						"paginate",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3005/api/updateContact/62128547c5bde0d03178e171",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorisation",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjEyMTZmYTAyNmQ4ZTBlNDY1NDUxN2MiLCJDb250YWN0cyI6ODk1MDg4Nzc1NiwiaWF0IjoxNjQ1MzUyNzQxfQ.5gcdLX38VA4fbRWLV-oIpO6IN_YZrfPgNPQM1D-i-KE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"contacts\":8953880756,\r\n\"address\":\"Mayank handloom,hari nagar,hisar\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3005/api/updateContact/62128547c5bde0d03178e171",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"updateContact",
+						"62128547c5bde0d03178e171"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3005/api/deleteContact/62128547c5bde0d03178e171",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorisation",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjEyMTZmYTAyNmQ4ZTBlNDY1NDUxN2MiLCJDb250YWN0cyI6ODk1MDg4Nzc1NiwiaWF0IjoxNjQ1MzUyNzQxfQ.5gcdLX38VA4fbRWLV-oIpO6IN_YZrfPgNPQM1D-i-KE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3005/api/deleteContact/62128547c5bde0d03178e171",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"deleteContact",
+						"62128547c5bde0d03178e171"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3005/logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3005/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
